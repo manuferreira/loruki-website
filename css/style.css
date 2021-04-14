@@ -1,0 +1,387 @@
+/*   resets  */
+
+:root {
+  font-size: 100%;
+  --primary-color: #047aed;
+  --secondary-color: #1c3fa8;
+  --dark-color: #002240;
+  --ligth-color: #f4f4f4;
+  --success-color: #5cb85c;
+  --error-color: #d9534f;
+}
+
+*,
+*::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  color: #333;
+  line-height: 1.6;
+  font-size: 1rem; /* 16px de fonte, assumindo o default 16 do browser */
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+h1,
+h2 {
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 0.3125em 0;
+}
+
+p {
+  margin: 1em 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+code, pre {
+  background-color: #333;
+  color: #fff;
+  padding: .625em;
+}
+
+/* navbar */
+
+.navbar {
+  background-color: var(--primary-color);
+  color: #fff;
+  height: 70px;
+  /* overflow: auto; se eu aplicar aqui, como tem uma altura fixa, a minha lista fica pra fora do .navbar, mas colocando o overflow vão ser criadas barras de rolagem e minha lista vai ficar dentro do .navbar porém vou ter que usar as barras de rolagem */
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar a {
+  color: #fff;
+  padding: .625em;
+  margin: 0 0.3125em;
+}
+
+.navbar a:hover {
+  border-bottom: 2px #fff solid;
+}
+
+.navbar .flex {
+  justify-content: space-between;
+}
+
+/* Showcase */
+
+.showcase {
+  height: 400px;
+  background: var(--primary-color);
+  color: #fff;
+  position: relative; /* pra se quiser posicionar algo absolutamente */
+  
+}
+
+.showcase h1 {
+  font-size: 2.5rem;
+}
+
+.showcase .grid {
+  grid-template-columns: repeat(2, 1fr); /* o conteúdo gruda nas laterais, seria melhor usar unidades de fr aqui */
+  gap: 30px;
+  overflow: visible;
+}
+
+.showcase-text {
+  animation: slideInFromLeft 1s ease-in;
+}
+
+.showcase-form {
+  position: relative;
+  top: 60px;
+  height: 350px; /* aqui ele vai ficar saindo do seu container que é a .showcase, por padrão, vão aparecer barras de rolagem, por isso no .container . grid o overflow: visible pra dar o efeito que a gente quer */
+  min-width: 400px;
+  justify-self: end;
+  z-index: 100; /* pra garantir que tá sempre na frente dos outros itens, por isso um z-index grande */
+  animation: slideInFromRight 1s ease-in;
+}
+
+.showcase-form .form-control {
+  margin: 2em 0;
+}
+
+.showcase-form input[type='text'],
+.showcase-form input[type='email'] {
+  border: 0;
+  border-bottom: 1px solid #b4becb;
+  width: 100%;
+  padding: .5em;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.showcase-form input:focus {
+  outline: none;
+}
+
+.showcase::before,
+.showcase::after {
+  content: '';
+  position: absolute; /* vai ser position absolute dentro da nossa showcase posicionada relativamente */
+  height: 100px;
+  bottom: -70px; /* -70px do bottom, ou seja, eles vao ficar pra fora do bottom do container deles */
+  right: 0;
+  left: 0;
+  background: #fff;
+  transform: skewY(-3deg); /* ele vai girar -3 graus no eixo y */
+  -webkit-transform: skewY(-3deg); /* pra chrome e safari */
+  -moz-transform: skewY(-3deg); /* agora pro mozilla */
+  -ms-transform: skewY(-3deg); /* pro IE */
+}
+
+/* Stats */
+
+.stats {
+  padding-top: 6.25em; /* por que nosso slant, que é o ``efeito`` que coloquei usando before e after tava cobrindo a parte de cima dessa section, por isso o padding top foi usado aqui */
+  animation: slideInFromBottom 1s ease-in;
+
+}
+
+.stats-heading {
+  max-width: 500px;
+  margin: auto; /* pra centralizar, dava pra usar o align text, mas dai eu teria que aplicar essa propriedade no parent */
+}
+
+.stats .grid h3 {
+  font-size: 2rem;
+}
+
+.stats .grid p {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+
+/* Cli */
+
+.cli .grid {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.cli .grid > *:first-child {
+  grid-column: 1 / span 2; /* tá expandindo na grid, ocupando duas colunas */
+  grid-row: 1 / span 2; /* expande pra duas linhas */
+}
+
+
+/* Cloud */
+
+.cloud .grid {
+  grid-template-columns: 4fr 3fr;
+}
+
+/* Languages */
+
+.languages .flex {
+  flex-wrap: wrap;
+}
+
+.languages .card {
+  text-align: center;
+  margin: 1.125em .625em 2.5em;
+  transition: transform 0.2s ease-in;
+}
+
+.languages .card h4 {
+  font-size: 1.25rem;
+  margin-bottom: .625em;
+}
+
+.languages .card:hover {
+  transform: translateY(-15px);
+}
+
+
+/* Features */
+
+.features-head img, .docs-head img {
+  width: 200px;
+  justify-self: end;
+}
+
+.features-sub-head img {
+  width: 300px;
+  justify-self: end;
+}
+
+
+.features-main .card > i {
+  margin-right: .5em;
+
+}
+
+.features-main .grid {
+  padding: 1em;
+  
+}
+
+.features-main .grid > *:first-child {
+  grid-column: 1 / span 3;
+}
+
+.features-main .grid > *:nth-child(2) {
+  grid-column: 1 / span 2;
+}
+
+/* Docs*/
+
+.docs-main h3 {
+  margin: 1em 0;
+}
+
+.docs-main .grid {
+  grid-template-columns: 1fr 2fr;
+  align-items: start;
+}
+
+.docs-main nav li {
+  font-size: 1rem;
+  padding-bottom: .625em;
+  margin-bottom: .625em;
+  border-bottom: 1px #ccc solid;
+}
+
+.docs-main a:hover {
+  font-weight: bold;
+}
+
+
+/* Footer */
+
+.footer .social a {
+  margin: 0 .625em;
+}
+
+/* Animations */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Tablets and under */
+@media (max-width: 815px) {
+  .grid,
+  .showcase .grid,
+  .stats .grid,
+  .cli .grid,
+  .cloud .grid,
+  .features-main .grid,
+  .docs-main .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .showcase {
+    height: auto; /* era 400px antes, aqui foi setada pra auto, ou seja ela vai pegar todo o container agora, vai ser maior */
+  }
+
+  .showcase-text {
+    text-align: center;
+    margin-top: 2em;
+  }
+
+  .showcase-form {
+    justify-self: center;
+    margin: auto;
+  }
+
+  .cli .grid > *:first-child {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .features-head,
+  .features-sub-head,
+  .docs-head {
+    text-align: center;
+  }
+
+  .features-head img,
+  .features-sub-head img,
+  .docs-head img {
+    justify-self: center;
+  }
+
+  .features-main .grid > *:first-child,
+  .features-main .grid > *:nth-child(2){
+    grid-column: 1;
+  }
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+  .navbar {
+    height: 110px; /* era 70px antes, mas aqui eu to aumentando por que eu quero mais espaço pro itens de menu ficarem embaixo da logo */
+  }
+
+  .navbar .flex {
+    flex-direction: column;
+  }
+
+  .navbar ul {
+    padding: .625em;
+    background: rgba(0,0,0,0.1);
+
+  }
+
+  .showcase-form {
+    width: 300px;
+  }
+
+}

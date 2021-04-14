@@ -1,0 +1,247 @@
+/* Utilities: classes que vou usar em todo website */
+
+.container {
+  /* como eu quero que meu container dentro da navbar tenha uma largura limitada eu não dou uma cor a ele, por que ficaria estranho */
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2em; /* pra não ficar colado nas laterais na versão mobile */
+  overflow: auto; /* resolve o problema da collapsing margin */
+}
+
+
+.card {
+  background-color: #fff;
+  color: #333;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  padding: 1.25em;
+  margin: 1em;
+}
+
+
+.btn { /* classe geral pros botões, temos classes mais específicas pra estilizar outros botões */
+  display: inline-block;
+  padding: .625em 1.875em;
+  cursor: pointer;
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px #fff solid;
+}
+
+.btn:hover {
+  transform: scale(.98); /* o botao da uma leve diminuida */
+}
+
+/* Backgrounds & colored buttons */
+
+.bg-primary,
+.btn-primary {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.bg-secondary,
+.btn-secondary {
+    background: var(--secondary-color);
+    color: #fff;
+}
+
+.bg-dark,
+.btn-dark {
+    background: var(--dark-color);
+    color: #fff;
+}
+
+.bg-ligth,
+.btn-ligth {
+    background: var(--ligth-color);
+    color: #333
+}
+
+.bg-primary a,
+.btn-primary a,
+.bg-secondary a,
+.btn-secondary a,
+.bg-dark a,
+.btn-dark a {
+    color: #fff;
+}
+
+/* Text colors */
+
+.text-primary {
+    color: var(--primary-color);
+}
+
+.text-secondary {
+    color: var(--secondary-color);
+}
+
+.text-dark {
+    color: var(--dark-color);
+}
+
+.text-ligth {
+    color: var(--ligth-color);
+}
+
+/* Texts and sizes (tem uns que a gente não vai usar, inclusive em outras seções também tem uns que não vão ser usados, mas é como se a gente tivesse criando nosso próprio framework, essas classes aqui são utilitárias, a gente pode aproveitar elas pra aplicar em vários componentes do site */
+
+.lead {
+    font-size: 1.25rem;
+}
+
+.sm {
+    font-size: 1rem;
+}
+
+.md {
+    font-size: 2rem;
+}
+
+.lg {
+    font-size: 3rem;
+}
+
+.xl {
+    font-size: 4rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Alert */
+
+.alert {
+    background-color: var(--ligth-color);
+    padding: .625em 1.25em;
+    font-weight: bold;
+    margin: 1em 0;
+}
+
+.alert i {
+    margin-right: .625em;
+}
+
+.alert-success {
+    background-color: var(--success-color);
+    color: #fff;
+}
+
+.alert-error {
+    background-color: var(--error-color);
+    color: #fff;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* vai ocupar 100% do container em que está */
+}
+
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25em;
+  justify-content: center;
+  align-items: center; /* sem a heigth de 100% setada essa propriedade aqui não iria funcionar, por que o grid container meio que fica do tamanho do que tá dentro dele a não ser que tu sete uma altura de fato */
+  height: 100%;
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+
+/* Margin, se quiser adicionar top and bottom margins  */
+
+.my-1 {
+    margin:  1em 0;
+}
+
+.my-2 {
+    margin: 1.5em 0;
+}
+
+.my-3 {
+    margin: 2em 0;
+}
+
+.my-4 {
+    margin: 3em 0;
+}
+
+.my-5 {
+    margin: 4em 0;
+}
+
+.m-1 {
+    margin:  1em;
+}
+
+.m-2 {
+    margin: 1.5em;
+}
+
+.m-3 {
+    margin: 2em;
+}
+
+.m-4 {
+    margin: 3em;
+}
+
+.m-5 {
+    margin: 4em;
+}
+
+/* Padding, se quiser adicionar top and bottom paddings */
+
+.py-1 {
+    padding:  1em 0;
+}
+
+.py-2 {
+    padding: 1.5em 0;
+}
+
+.py-3 {
+    padding: 2em 0;
+}
+
+.py-4 {
+    padding: 3em 0;
+}
+
+.py-5 {
+    padding: 4em 0;
+}
+
+.p-1 {
+    padding:  1em;
+}
+
+.p-2 {
+    padding: 1.5em;
+}
+
+.p-3 {
+    padding: 2em;
+}
+
+.p-4 {
+    padding: 3em;
+}
+
+.p-5 {
+    padding: 4em;
+}
