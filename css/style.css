@@ -1,0 +1,66 @@
+/* == BASE STYLES == */
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+
+/* VARIABLES */
+:root {
+    --dark-gray: #333;
+    --blue: #047aed;
+}
+
+/* RESETS */
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: var(--dark-gray);
+    line-height: 1.6;
+}
+
+
+ul {
+    list-style-type: none;
+}
+
+
+a {
+    text-decoration: none;
+    color: var(--dark-gray);
+}
+
+h1,
+h2 {
+    font-weight: 300;
+    line-height: 1.2;
+    margin: .5em 0;
+}
+
+p {
+    margin: .5em 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* NAVBAR */
+.navbar {
+    background-color: var(--blue);
+    color: #fff;
+    height: 70px;
+}
+
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    /* ou padding: 1px, a margin do h1 colapsou com a margin do .container que colapsou com a margem do .navbar porque não havia nada separando as margens desses elementos */
+    overflow: auto;
+}
