@@ -38,6 +38,7 @@ h1,
 h2 {
     font-weight: 300;
     line-height: 1.2;
+    /* ou padding: .5em 0; nesse caso, não haveria colapso de margem */
     margin: .5em 0;
 }
 
@@ -57,10 +58,38 @@ img {
     height: 70px;
 }
 
+.navbar ul {
+    display: flex;
+}
+
+.navbar a {
+    color: #fff;
+    padding: .5em;
+    margin: 0 .5em;
+}
+
+.navbar a:hover {
+    border-bottom: 2px #fff solid;
+}
+
+/* se houver algum elemento com a classe .flex dentro da .navbar a propriedade a seguir será aplicada */
+.navbar .flex {
+    justify-content: space-between;
+}
 
 .container {
     max-width: 1100px;
     margin: 0 auto;
     /* ou padding: 1px, a margin do h1 colapsou com a margin do .container que colapsou com a margem do .navbar porque não havia nada separando as margens desses elementos */
     overflow: auto;
+    padding: 0 2em;
+}
+
+/* Não quero colocar no meu .container direto como display: flex, porque eu pretendo reutilizar esse container e talvez ele nem precise ser um elemento flex, por isso a criação da utility class, além disso, posso reutilizar essa classe em outros elementos */
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* altura como sendo 100% do elemento pai, dependendo do conteúdo que estiver dentro do flex container, pode acontecer o overflow, setando a altura pra 100%, barras de rolagem podem aparecer nesse elemento */
+    height: 100%;
 }
