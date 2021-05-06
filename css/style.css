@@ -77,6 +77,15 @@ img {
     justify-content: space-between;
 }
 
+
+/* SHOWCASE */
+.showcase {
+    background-color: var(--blue);
+    color: #fff;
+}
+
+
+/* UTILITIES - will be used all around the website */
 .container {
     max-width: 1100px;
     margin: 0 auto;
@@ -93,3 +102,4 @@ img {
     /* altura como sendo 100% do elemento pai, dependendo do conteúdo que estiver dentro do flex container, pode acontecer o overflow, setando a altura pra 100%, barras de rolagem podem aparecer nesse elemento */
     height: 100%;
 }
+
