@@ -3,6 +3,7 @@
 
 /* VARIABLES */
 :root {
+    --ligth-gray: #b4becb;
     --dark-gray: #333;
     --blue: #047aed;
 }
@@ -35,7 +36,8 @@ a {
 }
 
 h1,
-h2 {
+h2,
+h3 {
     font-weight: 300;
     line-height: 1.2;
     /* ou padding: .5em 0; nesse caso, não haveria colapso de margem */
@@ -48,6 +50,13 @@ p {
 
 img {
     max-width: 100%;
+}
+
+form input {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: bold;
+    border: none;
 }
 
 
@@ -82,6 +91,57 @@ img {
 .showcase {
     background-color: var(--blue);
     color: #fff;
+    height: 25rem; /* altura de 400px baseado no font-size de 16px */
+    position: relative;
+}
+
+.showcase .grid {
+    grid-template-columns: 55% 45%;
+    gap: 2rem;
+    /* para o overflow do meu showcase-form ser visível */
+    overflow: visible;
+}
+
+.showcase h2 {
+    font-size: 2.5rem;
+}
+
+.showcase-form {
+    width: 400px;
+    position: relative;
+    top: 60px;
+    z-index: 100;
+    justify-self: flex-end;
+}
+
+.showcase-form h3 {
+    font-size: x-large;
+}
+
+.form-control {
+    margin: 2em 0;
+}
+
+.form-control > input {
+    width: 100%;
+    border-bottom: 1px solid var(--ligth-gray);
+}
+
+.form-control > input:focus {
+    outline: none;
+}
+
+
+.showcase::after { /* adicionando o slant */
+    display: block;
+    content: '';
+    background-color: #fff;
+    height: 100px;
+    position: absolute;
+    bottom: -70px;
+    left: 0;
+    right: 0;
+    transform: skewY(-2deg);
 }
 
 
@@ -103,3 +163,43 @@ img {
     height: 100%;
 }
 
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* esse container seria tão alto quanto o elemento mais alto que há nele, setando pra 100%, ele será 100% de altura do elemento pai, assim dá pra alinhar melhor os grid items dentro dele */
+}
+
+.card {
+    padding: 3em 2em;
+    background-color: #fff;
+    color: var(--dark-gray);
+    border-radius: 7px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.btn {
+    display: inline-block; /* propriedades como scale não funcionam em elementos que não são blocos */
+    border: none;
+    padding: .7em 2.3em;
+    border-radius: 5px;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale(.95);
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: var(--blue);
+}
+
+.btn-outline {
+    border: 1px #fff solid;
+    color: #fff;
+}
