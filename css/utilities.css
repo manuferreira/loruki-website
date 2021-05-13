@@ -1,0 +1,74 @@
+/* UTILITIES - will be used all around the website */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    /* ou padding: 1px, a margin do h1 colapsou com a margin do .container que colapsou com a margem do .navbar porque não havia nada separando as margens desses elementos */
+    overflow: auto;
+    padding: 0 2em;
+}
+
+/* Não quero colocar no meu .container direto como display: flex, porque eu pretendo reutilizar esse container e talvez ele nem precise ser um elemento flex, por isso a criação da utility class, além disso, posso reutilizar essa classe em outros elementos */
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* altura como sendo 100% do elemento pai, dependendo do conteúdo que estiver dentro do flex container, pode acontecer o overflow, setando a altura pra 100%, barras de rolagem podem aparecer nesse elemento */
+    height: 100%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* esse container seria tão alto quanto o elemento mais alto que há nele, setando pra 100%, ele será 100% de altura do elemento pai, assim dá pra alinhar melhor os grid items dentro dele */
+}
+
+.card {
+    padding: 2em 2.5em;
+    background-color: #fff;
+    color: var(--dark-gray);
+    border-radius: 7px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.btn {
+    display: inline-block; /* propriedades como scale não funcionam em elementos que não são blocos */
+    border: none;
+    padding: .7em 2.3em;
+    border-radius: 5px;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale(.95);
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: var(--blue);
+}
+
+.btn-outline {
+    border: 1px #fff solid;
+    color: #fff;
+}
+
+
+/* Margins global margins (margins between sections) */
+.my-6 {
+    margin: 6rem 0;
+}
+
+
+/* Margins between elements */
+.my-2 {
+    margin: 2em 0;
+}
+
+.my-3 {
+    margin: 3em 0;
+}

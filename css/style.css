@@ -6,10 +6,11 @@
     --ligth-gray: #b4becb;
     --dark-gray: #333;
     --blue: #047aed;
+    --dark-blue: #1c3fa8;
 }
 
-/* RESETS */
 
+/* RESETS */
 *,
 ::before,
 ::after {
@@ -144,62 +145,43 @@ form input {
     transform: skewY(-2deg);
 }
 
+/* STATS */
 
-/* UTILITIES - will be used all around the website */
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    /* ou padding: 1px, a margin do h1 colapsou com a margin do .container que colapsou com a margem do .navbar porque não havia nada separando as margens desses elementos */
-    overflow: auto;
-    padding: 0 2em;
+.stats-heading {
+    max-width: 600px;
+    margin: 2em auto;
+    text-align: center;
+    font-weight: bold;
 }
 
-/* Não quero colocar no meu .container direto como display: flex, porque eu pretendo reutilizar esse container e talvez ele nem precise ser um elemento flex, por isso a criação da utility class, além disso, posso reutilizar essa classe em outros elementos */
-.flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* altura como sendo 100% do elemento pai, dependendo do conteúdo que estiver dentro do flex container, pode acontecer o overflow, setando a altura pra 100%, barras de rolagem podem aparecer nesse elemento */
-    height: 100%;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    justify-content: center;
-    align-items: center;
-    height: 100%; /* esse container seria tão alto quanto o elemento mais alto que há nele, setando pra 100%, ele será 100% de altura do elemento pai, assim dá pra alinhar melhor os grid items dentro dele */
-}
-
-.card {
-    padding: 3em 2em;
-    background-color: #fff;
-    color: var(--dark-gray);
-    border-radius: 7px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+.stats-info.flex {
+    justify-content: space-around;
+    text-align: center;
 }
 
 
-.btn {
-    display: inline-block; /* propriedades como scale não funcionam em elementos que não são blocos */
-    border: none;
-    padding: .7em 2.3em;
-    border-radius: 5px;
-    font-size: inherit;
-    cursor: pointer;
+.stats-info h3 {
+    font-size: 2rem;
+    font-weight: bold;
 }
 
-.btn:hover {
-    transform: scale(.95);
+.text-secondary {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--dark-blue);
 }
 
-.btn-primary {
-    color: #fff;
-    background-color: var(--blue);
+.stats-card {
+    font-weight: bold;
+    padding: 1em 2em;
 }
 
-.btn-outline {
-    border: 1px #fff solid;
-    color: #fff;
+.cli .grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.cli .grid :first-child {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
 }
