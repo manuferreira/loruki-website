@@ -7,6 +7,7 @@
     --dark-gray: #333;
     --blue: #047aed;
     --dark-blue: #1c3fa8;
+    --shadow-blue: #002240;
 }
 
 
@@ -63,7 +64,6 @@ form input {
 
 /* NAVBAR */
 .navbar {
-    background-color: var(--blue);
     color: #fff;
     height: 70px;
 }
@@ -184,4 +184,26 @@ form input {
 .cli .grid :first-child {
     grid-column: 1 / span 2;
     grid-row: 1 / span 2;
+}
+
+/* Cloud */
+.cloud {
+    color: #fff;
+    padding: 1em 0;
+}
+
+.cloud .grid {
+    grid-template-columns: 4fr 3fr;
+}
+
+.cloud-info {
+    text-align: center;
+}
+
+.cloud-info h2 {
+    font-size: 3rem;
+}
+
+.cloud-info p {
+    font-size: 1.3rem;
 }

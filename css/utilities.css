@@ -34,26 +34,33 @@
 }
 
 
+/* Backgrounds and buttons */
 .btn {
     display: inline-block; /* propriedades como scale não funcionam em elementos que não são blocos */
     border: none;
-    padding: .7em 2.3em;
+    padding: .5em 2em;
     border-radius: 5px;
     font-size: inherit;
     cursor: pointer;
 }
 
 .btn:hover {
-    transform: scale(.95);
+    transform: scale(.98);
 }
 
-.btn-primary {
+.btn-primary,
+.bg-primary {
     color: #fff;
     background-color: var(--blue);
 }
 
 .btn-outline {
     border: 1px #fff solid;
+    color: #fff;
+}
+
+.btn-secondary {
+    background: var(--shadow-blue);
     color: #fff;
 }
 
@@ -72,3 +79,6 @@
 .my-3 {
     margin: 3em 0;
 }
+
+
+
