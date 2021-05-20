@@ -206,3 +206,33 @@ form input {
 .cloud-info p {
     font-size: 1.3rem;
 }
+
+/* LANGUAGES */
+.languages {
+    text-align: center;
+}
+
+.languages .card {
+    margin: 1em .625em;
+    padding: 1em 1.3em;
+    transition: transform 0.2s ease;
+}
+
+.languages-heading {
+    padding: 1.5em 0;
+    font-size: 2rem;
+}
+
+.languages .flex {
+    flex-wrap: wrap;
+}
+
+
+.languages .card h4 {
+    margin-bottom: .5em;
+}
+
+.languages .card:hover {
+    transform: translateY(-10px);
+
+}

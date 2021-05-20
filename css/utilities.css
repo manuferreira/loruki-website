@@ -27,6 +27,7 @@
 
 .card {
     padding: 2em 2.5em;
+    margin: 1rem;
     background-color: #fff;
     color: var(--dark-gray);
     border-radius: 7px;
@@ -80,5 +81,10 @@
     margin: 3em 0;
 }
 
+
+/* Text Sizes - I could put some different sizes of texts here */
+.md {
+    font-size: 1.3rem;
+}
 
 
