@@ -218,6 +218,11 @@ form input {
     transition: transform 0.2s ease;
 }
 
+.languages .card:hover {
+    transform: translateY(-10px);
+
+}
+
 .languages-heading {
     padding: 1.5em 0;
     font-size: 2rem;
@@ -227,12 +232,35 @@ form input {
     flex-wrap: wrap;
 }
 
-
 .languages .card h4 {
     margin-bottom: .5em;
 }
 
-.languages .card:hover {
-    transform: translateY(-10px);
 
+/* FOOTER */
+footer {
+    padding: 3em 0;
+    margin: 3rem 0 0;
 }
+
+.footer-heading {
+    font-size: 2rem;
+}
+
+small {
+    font-size: 1rem;
+}
+
+footer .grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.bg-dark {
+    background: var(--shadow-blue);
+    color: #fff;
+}
+
+.footer-links a {
+    color: #fff;
+}
+

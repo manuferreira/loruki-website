@@ -67,6 +67,10 @@
 
 
 /* Margins global margins (margins between sections) */
+.my-3 {
+    margin: 3rem 0;
+}
+
 .my-6 {
     margin: 6rem 0;
 }
@@ -81,10 +85,15 @@
     margin: 3em 0;
 }
 
+.mx-1 {
+    margin: 0 1em;
+}
 
 /* Text Sizes - I could put some different sizes of texts here */
 .md {
     font-size: 1.3rem;
 }
+
+/* Grid columns */
 
 
