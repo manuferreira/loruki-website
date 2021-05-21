@@ -107,6 +107,10 @@ form input {
     font-size: 2.5rem;
 }
 
+.showcase p {
+    margin: 1em 0;
+}
+
 .showcase-form {
     width: 400px;
     position: relative;
@@ -264,3 +268,64 @@ footer .grid {
     color: #fff;
 }
 
+.social-media li {
+    display: inline-block;
+}
+
+/* Tablets and under */
+@media (max-width: 780px) {
+    .cli .grid,
+    .cloud .grid,
+    footer .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .stats-info.flex {
+        flex-direction: column;
+    }
+
+}
+
+
+/* Showcase */
+@media (max-width: 920px) {
+    .showcase .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .showcase {
+        height: auto;
+    }
+
+    .showcase-form {
+        justify-self: center;
+    }
+
+    .showcase-text {
+        text-align: center;
+    }
+}
+
+
+/* Mobile */
+@media (max-width: 500px) {
+    .navbar {
+        height: 8rem;
+    }
+
+    .navbar .flex {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .showcase-form {
+        max-width: 250px;
+    }
+
+    .cli .grid :first-child {
+        grid-column: 1;
+        grid-row: 1;
+    }
+}

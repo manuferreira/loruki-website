@@ -89,6 +89,10 @@
     margin: 0 1em;
 }
 
+.mx-05 {
+    margin: 0 .5em;
+}
+
 /* Text Sizes - I could put some different sizes of texts here */
 .md {
     font-size: 1.3rem;
