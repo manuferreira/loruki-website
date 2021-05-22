@@ -47,6 +47,7 @@
 
 .btn:hover {
     transform: scale(.98);
+    font-weight: bold;
 }
 
 .btn-primary,
@@ -75,14 +76,12 @@
     margin: 6rem 0;
 }
 
-
-/* Margins between elements */
-.my-2 {
-    margin: 2em 0;
+.my-1 {
+    margin: 1em 0;
 }
 
-.my-3 {
-    margin: 3em 0;
+.my-2 {
+    margin: 2em 0;
 }
 
 .mx-1 {
@@ -107,6 +106,14 @@
     padding: 3em;
 }
 
+.px-1 {
+    padding: 0 1em;
+}
+
+.px-2 {
+    padding: 0 2em;
+}
+
 /* Text Sizes - I could put some different sizes of texts here */
 .md {
     font-size: 1.3rem;
@@ -120,8 +127,13 @@
     font-size: 4rem;
 }
 
+
 /* Grid columns */
 .grid-3 {
     grid-template-columns: repeat(3, 1fr);
 }
 
+/* Colors */
+.bg-light {
+    background: var(--light-bg);
+}
