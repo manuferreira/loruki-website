@@ -1,5 +1,5 @@
 # Loruki 
-This project it's a clone from a tutorial by Brad Traversy (https://github.com/bradtraversy/loruki-website), with the goal of improving my skills in Front End development.
+This project it's a challenge by Brad Traversy (https://github.com/bradtraversy/loruki-website), focusing on Flexbox, Grid and responsiveness.
 
 ## :hammer: Built with
 - HTML
